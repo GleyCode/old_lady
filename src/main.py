@@ -7,9 +7,9 @@ import struct_data
 def main():
     """Executa o jogo. Primeiro é obtido os valores de 'pedra' e posição no tabuleiro. Em seguida, o tabuleiro é atualizado; depois com os valores do tabuleito atualizamos o CLI, por fim, é verificado os arranjos possíveis de vitória.
     """
-    window_CLI.title()
+    window_CLI.mostrar_titulo()
     # tabuleiro inicial
-    window_CLI.window_tabuleiro(struct_data.positions)
+    window_CLI.mostrar_tabuleiro(struct_data.positions)
     
     while(True):
         opt, position = entry.play()
