@@ -11,7 +11,9 @@ def title():
         
 
 def window_tabuleiro(positions:dict):
-        """Interface de linha de comando atualizada em tempo de execução por um dicionário."""
+        """Interface de linha de comando atualizada em tempo de execução por um dicionário.
+        """
+        global window_messege
         window_messege = """\t.\t.\n\t.\t.\n   {}\t.   {}\t.   {}\n. . . . . . . . . . . . .\n\t.\t.\n   {}\t.   {}\t.   {}\n\t.\t.\n. . . . . . . . . . . . .\n\t.\t.\n   {}\t.   {}\t.   {}\n\t.\t.
         """.format(positions[1], positions[2], positions[3], positions[4], positions[5], positions[6], positions[7], positions[8], positions[9]) 
         print(window_messege)
@@ -19,6 +21,7 @@ def window_tabuleiro(positions:dict):
 
 def window_wins():
         """Mensagem de vitória."""
+        global window_messege
         window_messege = "VITÓRIA!!! PARABÉNS .)"
         print("\n{}".format('+'*120))
         print("\n" + window_messege)
