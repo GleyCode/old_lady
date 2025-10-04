@@ -1,8 +1,9 @@
 import struct_data
 
 
-def verify_wins():
-    """No jogo da velha são possíveis oito arranjos. Esse função testa para uma de duas posibilidades em cada arranjo.Em cada arranjo podemos ter a vitória de 'O' ou 'X'."""
+def verificar_vitoria():
+    """No jogo da velha são possíveis oito arranjos. Esse função testa para uma de duas posibilidades em cada arranjo.Em cada arranjo podemos ter a vitória de 'O' ou 'X'.
+    """
 
     # arranjo (1-5-9)
     if struct_data.positions[1] == "X" and struct_data.positions[5] == "X" and struct_data.positions[9] == "X":
