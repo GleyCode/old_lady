@@ -1,5 +1,8 @@
+# --- Módulos externo
 import os
 import time
+
+# --- Módulos interno
 from dados import posicoes
 
 
@@ -22,22 +25,19 @@ def mostrar_titulo():
     print("\nVersão 1.2")
     print("Desenvolvido por Abraão A. Silva\n")
     print("-" * 120)
+    print("\n")
         
 
 def mostrar_tabuleiro():
     """Atualiza o CLI em tempo de execução com um dicionário."""    
-    tabuleiro = f"""
-          :      :
-     {posicoes[1]:<4} : {posicoes[2]:<4} : {posicoes[3]:<4}
-    ..................
-          :      :
-     {posicoes[4]:<4} : {posicoes[5]:<4} : {posicoes[6]:<4}
-          :      :
-    ..................
-     {posicoes[7]:<4} : {posicoes[8]:<4} : {posicoes[9]:<4}
-          :      :
-    """
-    print(tabuleiro)
+    print(f"{"":<4} : {"":<4} : {"":<4}".center(120))
+    print(f"  {posicoes[1]:^4}:  {posicoes[2]:^4}: {posicoes[3]:^4}".center(120))
+    print("..................".center(120))
+    print(f"{"":<4} : {"":<4} : {"":<4}".center(120))
+    print(f"  {posicoes[4]:^4}: {posicoes[5]:^4} : {posicoes[6]:^4}".center(120))
+    print("..................".center(120))
+    print(f"  {posicoes[7]:^4}: {posicoes[8]:<4} : {posicoes[9]:<4}".center(120))
+    print(f"{"":<4} : {"":<4} : {"":<4}".center(120))
 
 
 def mostrar_mensagem_vitoria():
