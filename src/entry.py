@@ -1,4 +1,4 @@
-import struct_data
+import dados
 
 
 def play():
@@ -13,5 +13,5 @@ def play():
 
 def update_positions(opt, position):
     """Atualiza as posições no tabuleiro."""
-    struct_data.positions[position] = opt
+    dados.posicoes[position] = opt
     return
