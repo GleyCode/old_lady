@@ -10,7 +10,7 @@ def limpar_tela():
     os.system('clear')
 
 
-def pausar_fluxo():
+def pausar_tela():
     """Para a execução do jogo por 1,5 segundos."""
     time.sleep(1.5)
 
@@ -25,14 +25,18 @@ def mostrar_titulo():
         
 
 def mostrar_tabuleiro():
-    """CLI atualizado em tempo de execução por um dicionário."""    
+    """Atualiza o CLI em tempo de execução com um dicionário."""    
     tabuleiro = f"""
-        {posicoes[1]:<3} | {posicoes[2]:<3} | {posicoes[3]:<3}
-        ---------------
-        {posicoes[4]:<3} | {posicoes[5]:<3} | {posicoes[6]:<3}
-        ---------------
-        {posicoes[7]:<3} | {posicoes[8]:<3} | {posicoes[9]:<3}
-        """
+          :      :
+     {posicoes[1]:<4} : {posicoes[2]:<4} : {posicoes[3]:<4}
+    ..................
+          :      :
+     {posicoes[4]:<4} : {posicoes[5]:<4} : {posicoes[6]:<4}
+          :      :
+    ..................
+     {posicoes[7]:<4} : {posicoes[8]:<4} : {posicoes[9]:<4}
+          :      :
+    """
     print(tabuleiro)
 
 
@@ -53,5 +57,5 @@ def mostrar_mensagem_vitoria():
                 print(f"\n{"-" * 120}")
                 print("\n" + mensagem.center(40))
                 print(f"\n{"-" * 120}")
-        pausar_fluxo()
+        pausar_tela()
         limpar_tela()
