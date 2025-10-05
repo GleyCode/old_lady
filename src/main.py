@@ -1,6 +1,5 @@
-import entry
 import cli
-import rules
+import regras
 import dados
 
 
@@ -11,22 +10,27 @@ def main():
     cli.mostrar_tabuleiro()
     
     while(True):
-        opt, position = entry.play()
-        cli.limpar_tela()
-        cli.mostrar_titulo()
-
-        if opt in dados.opts:
-            entry.update_positions(opt, position)
-            cli.mostrar_tabuleiro()
-            status = rules.verificar_vitoria()
-
-            if status == 1:
-                cli.mostrar_mensagem_vitoria()
-                break
-            continue
+        try:
+            opt = str(input("\n\n\n\nEscolha uma pedra['X' ou 'O']: ")).upper()
+            posicao = int(input("Qual posição: "))
+        except:
+            pass
         else:
-            print("Pedra inválida! Tente novamente.")
-            continue
+            cli.limpar_tela()
+            cli.mostrar_titulo()
+
+            if opt in dados.opts:
+                dados.atualizar_posicao(opt, posicao)
+                cli.mostrar_tabuleiro()
+                status = regras.verificar_vitoria()
+
+                if status == 1:
+                    cli.mostrar_mensagem_vitoria()
+                    break
+                continue
+            else:
+                print("Pedra inválida! Tente novamente.")
+                continue
 
 
 # execução do jogo

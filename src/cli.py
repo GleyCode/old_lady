@@ -55,5 +55,3 @@ def mostrar_mensagem_vitoria():
                 print(f"\n{"-" * 120}")
         pausar_fluxo()
         limpar_tela()
-
-mostrar_tabuleiro()
